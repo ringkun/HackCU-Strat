@@ -3,7 +3,6 @@ icons.pngs/
 screenshots/
 user/
 *.import
-fonts/
 .DS_Store
 .mono
 *.idea
