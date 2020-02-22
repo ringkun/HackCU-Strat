@@ -3,19 +3,13 @@ using System;
 
 public class Tile : Node2D
 {
-	// Declare member variables here. Examples:
-	// private int a = 2;
-	// private string b = "text";
-
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		
-	}
-
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+    public const int SIDE_LENGTH = 64;
+    
+    public override void _Ready()
+    {
+        Sprite sprite = (Sprite) this.GetChildren()[0];
+        float scale = (float) (SIDE_LENGTH / Math.Sqrt(sprite.GetRect().Area));
+        sprite.Scale = new Vector2(scale, scale);
+    }
+    
 }
