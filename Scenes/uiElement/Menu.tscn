@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/uiElement/Menu.cs" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayAsMonsterButton" type="Button" parent="."]
+margin_left = 54.4472
+margin_top = 67.1752
+margin_right = 253.447
+margin_bottom = 236.175
+text = "Play as Monster"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayAsExplorerButton" type="Button" parent="."]
+margin_left = 55.0
+margin_top = 293.0
+margin_right = 260.0
+margin_bottom = 461.0
+text = "Play as Explorer"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TestButton" type="Button" parent="."]
+margin_left = 620.0
+margin_top = 113.0
+margin_right = 908.0
+margin_bottom = 267.0
+text = "TEST"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="PlayAsMonsterButton" to="." method="onPlayAsMonster"]
+[connection signal="pressed" from="PlayAsExplorerButton" to="." method="onPlayAsExplorer"]
+[connection signal="pressed" from="TestButton" to="." method="GoToMap"]
