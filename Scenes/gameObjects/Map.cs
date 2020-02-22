@@ -2,8 +2,8 @@ using Godot;
 using System;
 
 public class Map : Node2D {
-	[Export] int width = 1024 / 32;
-	[Export] int height = 640 / 32;
+	[Export] int width = 1024 / Tile.SIDE_LENGTH;
+	[Export] int height = 640 / Tile.SIDE_LENGTH;
 	private PackedScene tileScene = ResourceLoader.Load<PackedScene>("Scenes/gameObjects/Tile.tscn");
 	public override void _Ready() {
 		for (int i = 0; i < this.width; i++) {
