@@ -6,3 +6,4 @@ user/
 fonts/
 .DS_Store
 .mono
+*.idea
