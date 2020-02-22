@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="HackCU-Project"
+run/main_scene="res://Scenes/gameObjects/Map.tscn"
 config/icon="res://icon.png"
 
 [rendering]
