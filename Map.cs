@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class MeshInstance2D : Godot.MeshInstance2D
+public class Map : Node2D
 {
 	// Declare member variables here. Examples:
 	// private int a = 2;
