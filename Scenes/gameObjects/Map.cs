@@ -9,7 +9,9 @@ public class Map : Node2D
 	public override void _Ready() {
 		for (int i = 0; i < this.width; i++) {
 			for (int j = 0; j < this.height; j++) {
-				this.AddChild(this.tileScene.Instance());
+				Node2D instance = (Node2D) this.tileScene.Instance();
+				instance.Position = new Vector2(i * 100, j * 100);
+				this.AddChild(instance);
 			}
 		}
 	}
