@@ -30,10 +30,13 @@ public class controllableEntities : Sprite
 
 	public bool setCoord(int x, int y)
 	{
+		bool b = false;
 		if (validPos(x, y))
 		{
 			this.Position = new Vector2(x, y);
 		}
+
+		return b;
 	}
 
 	private int isWall(int x, int y)

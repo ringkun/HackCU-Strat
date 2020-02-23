@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class ItemButtonInteract : Button
+public class ItemButtonInteract : Control
 {
 	// Declare member variables here. Examples:
 	// private int a = 2;
@@ -10,7 +10,8 @@ public class ItemButtonInteract : Button
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		TweenN = this.GetParent().GetNode<Tween>("selectionTween");
+		TweenN = GetNode<Tween>("selectionTween");
+		/*l = GetNode("Parent/itemName");*/
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,21 +19,27 @@ public class ItemButtonInteract : Button
 //  {
 //      
 //  }
-
-	/*private float anchorReturn = 0;
-	public float anchorReveal = -1;
-	private void _on_Button_mouse_entered(){
-		TweenN.InterpolateProperty( (Control)(this.GetParent()), "AnchorTop", ((Control)this.GetParent()).AnchorTop, anchorReveal,1, Tween.TransitionType.Back, Tween.EaseType.Out);
-		GD.Print(((Control)this.GetParent()).AnchorTop);
-		TweenN.Start();
+	private float anchorReturn = 0;
+	private float anchorReveal = (float) -0.3;
+	private void _on_Button_mouse_entered()
+	{
+		TweenN.InterpolateProperty(this, "AnchorTop", this.AnchorTop, anchorReveal, 1, Tween.TransitionType.Back, Tween.EaseType.Out);
+		if (!TweenN.IsActive())
+		{
+			TweenN.Start();
+		}
 	}
 	private void _on_Button_mouse_exited(){
-		TweenN.InterpolateProperty( (Control)(this.GetParent()), "AnchorTop", ((Control)this.GetParent()).AnchorTop, anchorReturn,1,  Tween.TransitionType.Back, Tween.EaseType.Out);
-		GD.Print(((Control)this.GetParent()).AnchorTop);
-		TweenN.Start();
-	}*/
+		TweenN.InterpolateProperty(this, "AnchorTop", this.AnchorTop, anchorReturn,1, Tween.TransitionType.Back, Tween.EaseType.Out);
+		if (!TweenN.IsActive())
+		{
+			TweenN.Start();
+		}
+	}
 
 
 }
+
+
 
 
