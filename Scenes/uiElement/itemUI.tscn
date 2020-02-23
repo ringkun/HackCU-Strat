@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Fonts/Lacquer-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Images/icon.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/uiElement/ItemButtonInteract.cs" type="Script" id=3]
+[ext_resource path="res://Assets/Sound Effects/grind.wav" type="AudioStream" id=4]
 
 [sub_resource type="Theme" id=1]
 
@@ -60,5 +61,8 @@ __meta__ = {
 }
 
 [node name="selectionTween" type="Tween" parent="."]
+
+[node name="grind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 [connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]
