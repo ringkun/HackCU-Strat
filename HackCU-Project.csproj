@@ -57,6 +57,8 @@
     <Compile Include="Scenes\gameObjects\Map.cs" />
     <Compile Include="Scenes\gameObjects\Tile.cs" />
     <Compile Include="Scenes\uiElement\Menu.cs" />
+    <Compile Include="Scenes\uiElement\PlayAsExplorer.cs" />
+    <Compile Include="Scenes\uiElement\PlayAsMonster.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

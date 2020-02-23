@@ -2,7 +2,7 @@ using Godot;
 using System;
 
 public class Menu : Control {
-	
+
 	private void onPlayAsMonster() {
 		this.GetTree().ChangeScene("Scenes/uiElement/PlayAsMonster.tscn");
 	}
