@@ -8,10 +8,11 @@ public class ItemButtonInteract : Control
 	// private string b = "text";
 	private Tween TweenN;
 	// Called when the node enters the scene tree for the first time.
+	private AudioStreamPlayer grindsfx;
 	public override void _Ready()
 	{
 		TweenN = GetNode<Tween>("selectionTween");
-		/*l = GetNode("Parent/itemName");*/
+		grindsfx = GetNode<AudioStreamPlayer>("grind");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,6 +27,7 @@ public class ItemButtonInteract : Control
 		TweenN.InterpolateProperty(this, "AnchorTop", this.AnchorTop, anchorReveal, 1, Tween.TransitionType.Back, Tween.EaseType.Out);
 		if (!TweenN.IsActive())
 		{
+			grindsfx.Play();
 			TweenN.Start();
 		}
 	}
